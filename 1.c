@@ -10,13 +10,14 @@ int main()
 	int input;
 	int price;
 	int res;
-	printf("1. 프랭크버거세트(7400\)\n");
-	printf("2. 쉬림프버거세트(7800\)\n");
-	printf("3. 머쉬룸버거세트(11400\)\n");
-	printf("4. JG버거세트(12400\)\n");
+
+	printf("1. 프랭크버거세트(7400원)\n");
+	printf("2. 쉬림프버거세트(7800원)\n");
+	printf("3. 머쉬룸버거세트(11400원)\n");
+	printf("4. JG버거세트(12400원)\n");
 	printf("선택>> ");
 
-	scanf("%d", &menu);//switch 문 앞에 위치
+	scanf("%d", &menu);
 
 	switch (menu) {
 	case 1:
@@ -41,6 +42,7 @@ int main()
 		break;
 	default:
 		printf("잘못 선택하셨습니다.");
+		return 1;
 	}
 	printf("\n");
 	printf("금액을 투입하세요: ");
@@ -48,11 +50,6 @@ int main()
 	printf("%d원을 투입하셨습니다.\n", input);
 	res = input - price;
 	printf("잔돈은 %d원 입니다.", res);
-
-
-
-
-
 
 	return 0;
 }
